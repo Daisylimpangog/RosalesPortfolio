@@ -17,6 +17,7 @@
         <a href="#" style="--i: 1" class="active">Home</a>
         <a href="#about" style="--i: 2">About</a>
         <a href="#skills" style="--i: 3">Skill</a>
+        <a href="#todo-list" style="--i: 3">Todo</a>
         <a href="#contact" style="--i: 5">Contact</a>
         <a href="#" v-show="navBar" class="fast" @click="closeNavBar"
           ><i class="i">×</i></a
@@ -78,14 +79,52 @@
       </div>
     </section>
 
+    <section id="todo-list">
+      <div class="todo-container">
+        <div class="todo-body">
+          <h1>Todo List App</h1>
+          <div class="input-list">
+            <div class="search-list">
+              <input
+                type="text"
+                v-model="searchText"
+                placeholder="Search Todo..."
+              />
+              <i class="bx bx-search-alt-2"></i>
+            </div>
+          </div>
+          <div v-for="(todo, index) in todos" :key="index" class="todo-list">
+            <p>{{ todo.text }}</p>
+            <i @click="removeTodo(index)" class="bx bx-x"></i>
+          </div>
+
+          <div class="add-todo">
+            <h1>Add New List</h1>
+            <div class="new-input">
+              <input
+                type="text"
+                v-model="newTodo"
+                placeholder="Write Here..."
+              />
+              <i @click="addTodo" class="bx bx-plus"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section>
       <div id="contact">
         <div class="container">
           <div class="rowd">
             <div class="contact-left">
-              <h1 class="sub-title">Contact <span style="color: #0ef;">Me</span></h1>
-              <p class="emails"><i class="bx bx-send"></i> {{ contactEmail }}</p>
-              <p> <i class="bx bx-phone"></i> {{ contactPhoneNumber }}</p>
+              <h1 class="sub-title">
+                Contact <span style="color: #0ef">Me</span>
+              </h1>
+              <p class="emails">
+                <i class="bx bx-send"></i> {{ contactEmail }}
+              </p>
+              <p><i class="bx bx-phone"></i> {{ contactPhoneNumber }}</p>
               <div class="home-sci">
                 <a
                   href="https://www.facebook.com/daisy.jroa"
@@ -133,6 +172,12 @@
         </div>
       </div>
     </section>
+
+    <div>
+      <div class="last-text">
+        <p>© Copyright 2023</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -151,14 +196,23 @@ export default {
       contactEmail: "Daisylimpangog@gmail.com",
       contactPhoneNumber: "09204890541",
       socialLinks: {
-        facebook: "#", // Replace with your Facebook link
-        twitter: "#", // Replace with your Twitter link
-        instagram: "#", // Replace with your Instagram link
+        facebook: "#",
+        twitter: "#",
+        instagram: "#",
         linkedin: "#",
       },
       name: "",
       email: "",
       message: "",
+      searchText: "",
+      newTodo: "",
+      todos: [
+        { text: "this is the list number 1" },
+        {
+          text: "this is the list nusdf sdf sdf sdf sdf dsf ds fdsf dsf dsfsd fds sdf sdf sdfmber 1",
+        },
+        { text: "this is the list number 1" },
+      ],
     };
   },
   methods: {
@@ -170,13 +224,16 @@ export default {
     },
     submitForm() {
       // Handle form submission here
-      // You can access the form data using this.name, this.email, and this.message
-      // For example, you can send a request to your server or perform any other action.
+    },
+    addTodo() {
+      if (this.newTodo.trim() !== "") {
+        this.todos.push({ text: this.newTodo });
+        this.newTodo = "";
+      }
+    },
+    removeTodo(index) {
+      this.todos.splice(index, 1);
     },
   },
 };
 </script>
-
-<style scoped>
-/* Add component-specific styles here */
-</style>

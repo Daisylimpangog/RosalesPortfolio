@@ -918,7 +918,7 @@ form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    background: #262626;
+    background: #353434;
     padding: 15px;
     margin: 15px 0;
     color: #fff;
@@ -933,6 +933,119 @@ form .btn{
     color: black;
 }
 
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.todo-body{
+    width: 45%;
+    height: auto;
+    border: 2px solid #0ef;
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 200px cyan;
+}
+
+.todo-body h1{
+    text-align: center;
+    padding: 30px;
+}
+
+.todo-body .input-list{
+    padding: 0px 8% 0 8%;
+    text-align: center;
+}
+.search-list{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.input-list .search-list input{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #353434;
+    padding: 15px 50px 15px 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 6px;
+}
+.search-list i{
+    position: absolute;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #0ef;
+}
+
+.todo-list{
+    margin: 20px 8% 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #353434;
+    color: #e5e1e1;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.todo-list p{
+    padding: 10px;
+    
+}
+
+.new-input{
+    padding: 0px 8% 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-todo h1{
+    font-size: 20px;
+    margin-bottom: -18px;
+}
+
+.todo-list i{
+    font-size: 40px;
+    cursor: pointer;
+    color: #0ef;
+}
+
+.new-input input{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #353434;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+.new-input i{
+    font-size: 40px;
+    cursor: pointer;
+    color: #0ef;
+    background: #353434;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.todo-list i:hover{
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 200px cyan;
+    color: #ff004f;
+    border-radius: 5px;
+}
+
+.new-input i:hover{
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 200px cyan;
+}
 
 
 @keyframes slideRight {
@@ -1012,6 +1125,11 @@ form .btn{
         margin-left: 5%;
     }
 
+    .todo-body{
+        width: 80%;
+        margin-left: 0%;
+    }
+
     .contact-text h2, .main-text h2, .sub-title, .home-content h1, .about-text h2 {
         font-size: 40px;
     }
@@ -1031,8 +1149,7 @@ form .btn{
         margin-left: 10%;
     }
     .contact-right{
-        flex-basis: 80%;
-        margin-left: 10%;
+        flex-basis: 100%;
     }
 
     /* .navbar{
