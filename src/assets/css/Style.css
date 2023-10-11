@@ -152,7 +152,7 @@ body {
     margin: 30px 15px 30px 0;
 }
 
-.home-sci a:hover {
+.home-sci a:hover, .btn:hover {
     background: #0ef;
     color: #081b29;
     box-shadow: 0 0 20px #0ef;
@@ -870,6 +870,71 @@ form textarea {
     width: 150px;
 }
 
+
+.rowd{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p i{
+    color: #0ef;
+    margin-right: 15px;
+    font-size: 22px;
+}
+
+.contact-left p{
+    display: flex;
+    font-size: 18px;
+}
+.emails{
+    margin-bottom: 10px;
+}
+
+.btn.btn2{
+    display: inline-block;
+}
+.btn{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: transparent;
+    text-decoration: none;
+    color: #0ef;
+    border: 2px solid #0ef;
+}
+
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn{
+    padding: 10px 20px;
+    width: 100%;
+    background: #0ef;
+    color: black;
+}
+
+
+
 @keyframes slideRight {
     0% {
         transform: translateX(-100px);
@@ -960,6 +1025,14 @@ form textarea {
     form textarea {
         width: 100%;
     
+    }
+    .contact-left{
+        flex-basis: 80%;
+        margin-left: 10%;
+    }
+    .contact-right{
+        flex-basis: 80%;
+        margin-left: 10%;
     }
 
     /* .navbar{
