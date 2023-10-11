@@ -29,11 +29,8 @@
       <div class="home-content">
         <h3>Hello, It's Me</h3>
         <h1>Daisy A. Limpangog</h1>
-        <h3>
-          And I'm a <span class="text">{{ currentString }}</span>
-        </h3>
         <p>
-          Web Developer etc.
+          Web Designer
           <br />expertise is to create a website design etc. not yet
         </p>
 
@@ -45,20 +42,32 @@
           >
             <i class="bx bxl-facebook"></i>
           </a>
-          <a href="#" :style="{ '--i': 8 }">
+          <a
+            href="https://www.instagram.com/Followed%20by%20189%2C271%20people/?fbclid=IwAR1rIl4vpvTIqjXl609QXyz1_wab6kps5eDvR9mgJ7zxjTm8oEiiumflshs"
+            :style="{ '--i': 8 }"
+            target="_blank"
+          >
             <i class="bx bxl-instagram"></i>
           </a>
-          <a href="#" target="_blank" :style="{ '--i': 9 }">
+          <a
+            href="https://github.com/Daisylimpangog"
+            target="_blank"
+            :style="{ '--i': 9 }"
+          >
             <i class="bx bxl-github"></i>
           </a>
-          <a href="#" :style="{ '--i': 10 }">
-            <i class="bx bxl-whatsapp"></i>
+          <a
+            href="https://l.facebook.com/l.php?u=https%3A%2F%2Ftiktok.com%2F%40Followed%2520by%25201%252C723%252C927%2520people%3Ffbclid%3DIwAR0abiLyFwMObJ4R2EOOgY5ljn-tAzCMBOInWgFeZ0Q4uPnbxQxZUgu3iPU&h=AT1XEELZ7laqgf5RJFJJ1kij4qb_gxl3uFlvQtyd3421AQLALrLqZ-rsP7EMSO2kOotU_jUi_hVj43QRLkbPGsmrXunid0XYuzInqe2k8B9eWFaXAFp-Kvnh6U-TvZhSHrAC2OjtFPpByFiK3KGM"
+            :style="{ '--i': 10 }"
+            target="_blank"
+          >
+            <i class="bx bxl-tiktok"></i>
           </a>
         </div>
         <a href="#" class="btn-box">More About Me</a>
       </div>
       <div class="images">
-        <img :src="s" />
+        <img :src="daisy" />
       </div>
       <span class="home-imgHover"></span>
     </section>
@@ -71,11 +80,27 @@
         <h2>About <span>Me</span></h2>
         <h4>Who I Am</h4>
         <p>
-          my text here jslkfjsdlkfjdsfj as part of a full stack testing sentence
-          secret ambition etc. and i am the best one the can etc. hahaha
-          sdlfkjsdl jsdlk sdlkj sdl kjsdj sdk jsd sdlfj sdjfsdl jsd
+          I am a 25-year-old male who consistently tells my teacher that I am a girl because my name is feminine, despite my actual gender being male. I have a strong inclination for social interaction, enjoying meeting new people and forming friendships. I am sociable, frequently going out with friends and family. Additionally, I have a passion for exploring new places, with a particular affinity for nature. I also have a keen interest in creative activities such as video and photo editing.
         </p>
         <a href="#" class="btn-box">More About Me</a>
+      </div>
+    </section>
+    
+    <section style="display: flex; height: 100vh;">
+      <!-- <h1 className="sub-title" style="font-size: 50px; margin-bottom: -20px;">My <span>Skills</span></h1> -->
+      <div class="container1" id="skills">
+        <h1 class="heading1">My <span style="color: #0ef;">Skills</span></h1>
+        <div class="technical-bars">
+          <div v-for="(skill, index) in skills" :key="index" class="bar">
+            <i :class="skill.iconClass" :style="{ color: skill.color }"></i>
+            <div class="info">
+              <span>{{ skill.name }}</span>
+            </div>
+            <div :class="['progress-line', skill.class]">
+              <span></span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -129,18 +154,30 @@
                 <a
                   href="https://www.facebook.com/daisy.jroa"
                   target="_blank"
-                  :style="{ '--i': 11 }"
+                  :style="{ '--i': 7 }"
                 >
                   <i class="bx bxl-facebook"></i>
                 </a>
-                <a href="#" :style="{ '--i': 12 }">
+                <a
+                  href="https://www.instagram.com/Followed%20by%20189%2C271%20people/?fbclid=IwAR1rIl4vpvTIqjXl609QXyz1_wab6kps5eDvR9mgJ7zxjTm8oEiiumflshs"
+                  :style="{ '--i': 8 }"
+                  target="_blank"
+                >
                   <i class="bx bxl-instagram"></i>
                 </a>
-                <a href="#" target="_blank" :style="{ '--i': 13 }">
+                <a
+                  href="https://github.com/Daisylimpangog"
+                  target="_blank"
+                  :style="{ '--i': 9 }"
+                >
                   <i class="bx bxl-github"></i>
                 </a>
-                <a href="#" :style="{ '--i': 14 }">
-                  <i class="bx bxl-whatsapp"></i>
+                <a
+                  href="https://l.facebook.com/l.php?u=https%3A%2F%2Ftiktok.com%2F%40Followed%2520by%25201%252C723%252C927%2520people%3Ffbclid%3DIwAR0abiLyFwMObJ4R2EOOgY5ljn-tAzCMBOInWgFeZ0Q4uPnbxQxZUgu3iPU&h=AT1XEELZ7laqgf5RJFJJ1kij4qb_gxl3uFlvQtyd3421AQLALrLqZ-rsP7EMSO2kOotU_jUi_hVj43QRLkbPGsmrXunid0XYuzInqe2k8B9eWFaXAFp-Kvnh6U-TvZhSHrAC2OjtFPpByFiK3KGM"
+                  :style="{ '--i': 10 }"
+                  target="_blank"
+                >
+                  <i class="bx bxl-tiktok"></i>
                 </a>
               </div>
               <a href="#" class="btn btn2">Download CV</a>
@@ -212,6 +249,26 @@ export default {
           text: "this is the list nusdf sdf sdf sdf sdf dsf ds fdsf dsf dsfsd fds sdf sdf sdfmber 1",
         },
         { text: "this is the list number 1" },
+      ],
+      skills: [
+        {
+          name: "HTML",
+          iconClass: "bx bxl-html5",
+          color: "#c95d2e",
+          class: "html",
+        },
+        {
+          name: "CSS",
+          iconClass: "bx bxl-css3",
+          color: "#147bbc",
+          class: "css",
+        },
+        {
+          name: "Java",
+          iconClass: "bx bxl-java",
+          color: "#b0bc1e",
+          class: "javascript",
+        },
       ],
     };
   },
