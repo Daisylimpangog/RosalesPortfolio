@@ -244,11 +244,11 @@ export default {
       searchText: "",
       newTodo: "",
       todos: [
-        { text: "this is the list number 1" },
+        { text: "Bytewebster is a website where we create amazing coding blogs" },
         {
-          text: "this is the list nusdf sdf sdf sdf sdf dsf ds fdsf dsf dsfsd fds sdf sdf sdfmber 1",
+          text: "Digital Clok in Java Script or CSS - ByteWebster",
         },
-        { text: "this is the list number 1" },
+        { text: "JavaScript Quiz web App using Glassmorphism - ByteWebster" },
       ],
       skills: [
         {
