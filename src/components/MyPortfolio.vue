@@ -31,7 +31,6 @@
         <h1>Daisy A. Limpangog</h1>
         <p>
           Web Designer
-          <br />expertise is to create a website design.
         </p>
 
         <div class="home-sci">
