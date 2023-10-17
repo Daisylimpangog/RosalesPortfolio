@@ -908,6 +908,19 @@ form .btn{
     color: black;
 }
 
+.clear-all{
+    text-align: center;
+}
+.clear-all button{
+    font-size: 20px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    background: transparent;
+    color: #0ef;
+    cursor: pointer;
+}
+
 .todo-container{
     display: flex;
     justify-content: center;
@@ -969,7 +982,7 @@ form .btn{
 
 .todo-list p{
     padding: 10px;
-    
+    width: 100%;
 }
 
 .new-input{
@@ -1012,6 +1025,7 @@ form .btn{
     border-radius: 5px;
 }
 
+.clear-all button:hover,
 .todo-list i:hover{
     box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 200px cyan;
     color: #ff004f;
@@ -1093,6 +1107,8 @@ form .btn{
         text-align: left;
     }
 }
+
+
 
 @media screen and (max-width: 900px) {
     .contact {

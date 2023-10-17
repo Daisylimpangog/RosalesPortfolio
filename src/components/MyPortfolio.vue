@@ -28,10 +28,8 @@
     <section class="home">
       <div class="home-content">
         <h3>Hello, It's Me</h3>
-        <h1>Daisy A. Limpangog</h1>
-        <p>
-          Web Designer
-        </p>
+        <h1>User Name</h1>
+        <p>Web Designer</p>
 
         <div class="home-sci">
           <a
@@ -79,16 +77,23 @@
         <h2>About <span>Me</span></h2>
         <h4>Who I Am</h4>
         <p>
-          I am a 25-year-old male who consistently tells my teacher that I am a girl because my name is feminine, despite my actual gender being male. I have a strong inclination for social interaction, enjoying meeting new people and forming friendships. I am sociable, frequently going out with friends and family. Additionally, I have a passion for exploring new places, with a particular affinity for nature. I also have a keen interest in creative activities such as video and photo editing.
+          I am a 25-year-old male who consistently tells my teacher that I am a
+          girl because my name is feminine, despite my actual gender being male.
+          I have a strong inclination for social interaction, enjoying meeting
+          new people and forming friendships. I am sociable, frequently going
+          out with friends and family. Additionally, I have a passion for
+          exploring new places, with a particular affinity for nature. I also
+          have a keen interest in creative activities such as video and photo
+          editing.
         </p>
         <a href="#" class="btn-box">More About Me</a>
       </div>
     </section>
-    
-    <section style="display: flex; height: 100vh;">
+
+    <section style="display: flex; height: 100vh">
       <!-- <h1 className="sub-title" style="font-size: 50px; margin-bottom: -20px;">My <span>Skills</span></h1> -->
       <div class="container1" id="skills">
-        <h1 class="heading1">My <span style="color: #0ef;">Skills</span></h1>
+        <h1 class="heading1">My <span style="color: #0ef">Skills</span></h1>
         <div class="technical-bars">
           <div v-for="(skill, index) in skills" :key="index" class="bar">
             <i :class="skill.iconClass" :style="{ color: skill.color }"></i>
@@ -118,9 +123,17 @@
             </div>
           </div>
           <div v-for="(todo, index) in todos" :key="index" class="todo-list">
-            <p>{{ todo.text }}</p>
-            <i @click="removeTodo(index)" class="bx bx-x"></i>
+            <p :class="{ completed: todo.completed }">{{ todo.text }}</p>
+            <!-- <div> -->
+            <i @click="toggleCompletionStatus(index)" class="bx bx-check"></i>
+            <i
+              @click="removeTodo(index)"
+              class="bx bx-x"
+              v-if="!todo.completed"
+            ></i>
+            <!-- </div> -->
           </div>
+          <div class="clear-all"><button @click="clearAll">Clear All</button></div>
 
           <div class="add-todo">
             <h1>Add New List</h1>
@@ -217,6 +230,13 @@
   </div>
 </template>
 
+<style>
+.completed {
+  text-decoration: line-through; 
+  text-align: center; 
+}
+</style>
+
 <script>
 import "../assets/css/Style.css";
 
@@ -243,7 +263,9 @@ export default {
       searchText: "",
       newTodo: "",
       todos: [
-        { text: "Bytewebster is a website where we create amazing coding blogs" },
+        {
+          text: "Bytewebster is a website where we create amazing",
+        },
         {
           text: "Digital Clok in Java Script or CSS - ByteWebster",
         },
@@ -289,6 +311,16 @@ export default {
     },
     removeTodo(index) {
       this.todos.splice(index, 1);
+    },
+
+    toggleCompletionStatus(index) {
+      this.todos[index].completed = !this.todos[index].completed;
+    },
+
+    clearAll() {
+      this.todos = this.todos.filter(
+        (todo) => !todo.completed && todo.completed
+      );
     },
   },
 };
