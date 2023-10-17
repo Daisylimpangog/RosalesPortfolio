@@ -135,7 +135,7 @@
             ></i>
             <!-- </div> -->
           </div>
-          <div class="clear-all"><button @click="clearAll">Clear All</button></div>
+          <div class="clear-all"><button @click="clearAll" v-if="incompleteTodosExist">Clear All</button></div>
 
           <div class="add-todo">
             <h1>Add New List</h1>
@@ -294,6 +294,11 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    incompleteTodosExist() {
+      return this.todos.some((todo) => !todo.completed || todo.completed);
+    },
   },
   methods: {
     toggleNavBar() {
