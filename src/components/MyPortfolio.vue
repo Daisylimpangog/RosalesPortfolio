@@ -77,14 +77,15 @@
         <h2>About <span>Me</span></h2>
         <h4>Who I Am</h4>
         <p>
-          I am a 25-year-old male who consistently tells my teacher that I am a
+          <!-- I am a 25-year-old male who consistently tells my teacher that I am a
           girl because my name is feminine, despite my actual gender being male.
           I have a strong inclination for social interaction, enjoying meeting
           new people and forming friendships. I am sociable, frequently going
           out with friends and family. Additionally, I have a passion for
           exploring new places, with a particular affinity for nature. I also
           have a keen interest in creative activities such as video and photo
-          editing.
+          editing. -->
+          his info
         </p>
         <a href="#" class="btn-box">More About Me</a>
       </div>
