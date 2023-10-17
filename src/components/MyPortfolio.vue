@@ -29,6 +29,7 @@
       <div class="home-content">
         <h3>Hello, It's Me</h3>
         <h1>User Name</h1>
+        <!-- <h1>Daisy A. Limpangog</h1> -->
         <p>Web Designer</p>
 
         <div class="home-sci">
